@@ -12,12 +12,10 @@ describe('TextBox2 componente', () => {
     });
 
     it('la caja de texto se encuentra en el documento', () => {
-        //comprobamos si la <Box> está en nuestro documento
         expect(box).toBeInTheDocument();
     });
 
     it('el botón se encuentra en el documento', () => {
-        //comprobamos si el <Button> está en nuestro documento
         expect(button).toBeInTheDocument();
     })
 
@@ -28,12 +26,8 @@ describe('TextBox2 componente', () => {
     });
 
     it('comprobar si al pulsar el botón cambia el color del texto', async () => {
-        //usamos el userEvent. Lo primero que debemos hacer es inicializarlo:
         const user = userEvent.setup()
-        //simulamos que el usuario clica el botón
         await user.click(button);
-        //Ahora comprobamos que al pulsar en el botón se cambia
-        //el color de fondo de la caja (Box) a tomato.
         expect(box).toHaveStyle({
             color: 'rgb(0,0,0)'
         });
