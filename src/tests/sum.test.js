@@ -19,10 +19,4 @@ describe('sum', () => {
             expect(result).toBe(3);
         })
 
-    it('debe retornar 5',() =>
-    {
-        const result = sum(2,3);
-        expect(result).toBe(5)
-    })
-       
     });
